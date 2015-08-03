@@ -1,9 +1,9 @@
-# arp-discovery
-Scan the local network for MAC addresses.
+# nodejs arp-discovery
+Discover hosts in the local network using ARP.
 
 Tested on Mac and Linux (ubuntu).
 
-It uses the command "arp -a" to get MAC addreses
+It uses the command "arp -a" to get hosts
 for the LAN. Before running the command it
 floods the local network with requests for all
 IP addresses, hopefully getting the ARP table
@@ -80,34 +80,41 @@ and leadings "0" if needed.
 ## Sample Results
 
     getMacs:
-    { '20:AA:4B:CB:63:47': '192.168.24.1',
-      '00:30:DE:08:B1:75': '192.168.24.100',
-      '30:05:5C:6B:13:EF': '192.168.24.169',
-      'A4:5E:60:E7:63:B5': '192.168.24.183',
-      '00:01:2E:4D:3F:86': '192.168.24.192',
-      '00:18:DD:41:02:6A': '192.168.24.216',
-      'B4:18:D1:DE:06:3B': '192.168.24.245' }
-
+    {
+        '20:AA:4B:CB:63:47': '192.168.24.1',
+        '00:30:DE:08:B1:75': '192.168.24.100',
+        '30:05:5C:6B:13:EF': '192.168.24.169',
+        'A4:5E:60:E7:63:B5': '192.168.24.183',
+        '00:01:2E:4D:3F:86': '192.168.24.192',
+        '00:18:DD:41:02:6A': '192.168.24.216',
+        'B4:18:D1:DE:06:3B': '192.168.24.245' 
+    }
     found / lost / update:
-      { ip: '192.168.24.245',
+    { 
+        ip: '192.168.24.245',
         host: 'airport-express-de-ana.lan',
         mac: 'B4:18:D1:DE:06:3B',
         interface: 'en0',
-        seen: 1438530008346 }
-
-success:
-      { '20:AA:4B:CB:63:47':
-           { ip: '192.168.24.1',
-             host: 'openwrt.lan',
-             mac: '20:AA:4B:CB:61:41',
-             interface: 'en0',
-             vendor:'Cisco system',
-             seen: 1438530008336 },
+        seen: 1438530008346 
+    }
+    success:
+    { 
+        '20:AA:4B:CB:63:47':
+           { 
+                ip: '192.168.24.1',
+                host: 'openwrt.lan',
+                mac: '20:AA:4B:CB:61:41',
+                interface: 'en0',
+                vendor:'Cisco system',
+                seen: 1438530008336 
+            },
         '00:30:DE:08:B1:75':
-           { ip: '192.168.24.100',
-             host: 'unknown',
-             mac: '00:30:DE:08:B1:75',
-             interface: 'en0',
-             vendor: 'Apple',
-             seen: 1438530008341 }
-      }
+           { 
+                ip: '192.168.24.100',
+                host: 'unknown',
+                mac: '00:30:DE:08:B1:75',
+                interface: 'en0',
+                vendor: 'Apple',
+                seen: 1438530008341 
+            }
+    }
