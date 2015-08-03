@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "Stephen Leger",
+    "email": "stephen@3dservices.ch",
+    "url": "http://3dservices.ch"
+  },
+  "bugs": {
+    "url": "https://github.com/s-leger/arp-discovery/issues"
+  },
+  "dependencies": {
+    "async": "^1.4.0",
+    "ip": "~0.3.2"
+  },
+  "description": "Discover network hosts using ARP",
+  "homepage": "https://github.com/s-leger/arp-discovery",
+  "homestar": {},
+  "license": "Apache-2.0",
+  "main": "arp-discovery.js",
+  "name": "arp-discovery",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-leger/arp-discovery"
+  },
+  "scripts": {},
+  "version": "0.0.1",
+  "maintainers": [
+    {
+      "name": "s-leger",
+      "email": "stephen@3dservices.ch"
+    }
+  ]
+}
